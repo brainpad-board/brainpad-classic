@@ -1,0 +1,24 @@
+{
+  "lang": "en",
+  "dir": "ltr",
+  "name": "GHI Brain Pad",
+  "short_name": "brainpad",
+  "background_color": "#FAFAFA",
+  "icons": [
+    {
+      "src": "@cdnUrl@/blob/73c4e67681d5082f94c2c4a4fa68c64760708d46/static/icons/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "types": "image/png"
+    },
+    {
+      "src": "@cdnUrl@/blob/c8357e2cd78e8882914b69a92c5a4c9e5eb7415f/static/icons/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "types": "image/png"
+    }
+  ],
+  "scope": "/",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "landscape",
+  "theme_color": "#0089BF"
+}
