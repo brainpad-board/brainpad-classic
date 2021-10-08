@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" manifest="/brainpad-classic/release.manifest" data-framework="typescript">
+<html lang="en" manifest="/release.manifest" data-framework="typescript">
 
 <head>
     <meta charset="utf-8">
@@ -15,7 +15,7 @@
 
 <title>GHI Brain Pad - Blocks / Javascript editor</title>
 <meta name="description" content="A Blocks / JavaScript code editor for the GHI Brain Pad." />
-<link rel="manifest" href="/brainpad-classic/sim.webmanifest">
+<link rel="manifest" href="/sim.webmanifest">
 
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -47,7 +47,7 @@
 <!-- end include appmeta.html -->
 
 
-    <link rel="stylesheet" data-rtl="/brainpad-classic/rtlsemantic.css" href="/brainpad-classic/semantic.css" type="text/css">
+    <link rel="stylesheet" data-rtl="/rtlsemantic.css" href="/semantic.css" type="text/css">
 </head>
 
 <body class="main">
@@ -76,30 +76,30 @@
     <script>
         // This line gets patched up by the cloud
         var pxtConfig = {
-    "relprefix": "/brainpad-classic/",
+    "relprefix": "/",
     "verprefix": "",
-    "workerjs": "/brainpad-classic/worker.js",
-    "monacoworkerjs": "/brainpad-classic/monacoworker.js",
+    "workerjs": "/worker.js",
+    "monacoworkerjs": "/monacoworker.js",
     "pxtVersion": "4.3.1",
     "pxtRelId": "",
-    "pxtCdnUrl": "/brainpad-classic/",
-    "commitCdnUrl": "/brainpad-classic/",
-    "blobCdnUrl": "/brainpad-classic/",
-    "cdnUrl": "/brainpad-classic/",
+    "pxtCdnUrl": "/",
+    "commitCdnUrl": "/",
+    "blobCdnUrl": "/",
+    "cdnUrl": "/",
     "targetVersion": "0.0.0",
     "targetRelId": "",
     "targetUrl": "",
     "targetId": "brainpad",
-    "simUrl": "/brainpad-classic/simulator.html",
-    "partsUrl": "/brainpad-classic/siminstructions.html",
-    "runUrl": "/brainpad-classic/run.html",
-    "docsUrl": "/brainpad-classic/docs.html",
+    "simUrl": "/simulator.html",
+    "partsUrl": "/siminstructions.html",
+    "runUrl": "/run.html",
+    "docsUrl": "/docs.html",
     "isStatic": true
 };
     </script>
     
 <!-- include apptrackingweb.html -->
-<script type="text/javascript" src="/brainpad-classic/pxtweb.js"></script>
+<script type="text/javascript" src="/pxtweb.js"></script>
 <!-- end include apptrackingweb.html -->
 
     
@@ -115,7 +115,7 @@
             disableExceptionTracking: true,
             isCookieUseDisabled: !includeCookie,
             isStorageUseDisabled: !includeCookie,
-            url: "/brainpad-classic/ai.0.js"
+            url: "/ai.0.js"
         });
         window.appInsights=appInsights;
         appInsights.queue.push(function () {
@@ -158,9 +158,9 @@
 </script>
 <!-- end include apptracking.html -->
 
-    <script type="text/javascript" src="/brainpad-classic/pxtapp.js"></script>
-    <script type="text/javascript" src="/brainpad-classic/target.js"></script>
-    <script id="mainscript" type="text/javascript" src="/brainpad-classic/main.js"></script>
+    <script type="text/javascript" src="/pxtapp.js"></script>
+    <script type="text/javascript" src="/target.js"></script>
+    <script id="mainscript" type="text/javascript" src="/main.js"></script>
     <xml id="blocklyToolboxDefinitionCategory" style="display: none">
         <!-- An empty category is required so that Blockly launches in category mode -->
         <category name="">
@@ -182,23 +182,23 @@
         // this get rewritten to blob URLs with SHAs while uploading to the cloud
         // keep in sync with release.manifest
         window.MonacoPaths = {
-            "vs/loader": "/brainpad-classic/vs/loader.js",
-            "vs/base/worker/workerMain": "/brainpad-classic/vs/base/worker/workerMain.js",
-            "vs/basic-languages/src/bat": "/brainpad-classic/vs/basic-languages/src/bat.js",
-            "vs/basic-languages/src/cpp": "/brainpad-classic/vs/basic-languages/src/cpp.js",
-            "vs/editor/editor.main.css": "/brainpad-classic/vs/editor/editor.main.css",
-            "vs/editor/editor.main": "/brainpad-classic/vs/editor/editor.main.js",
-            "vs/editor/editor.main.nls": "/brainpad-classic/vs/editor/editor.main.nls.js",
-            "vs/language/json/jsonMode": "/brainpad-classic/vs/language/json/jsonMode.js",
-            "vs/language/json/jsonWorker": "/brainpad-classic/vs/language/json/jsonWorker.js",
-            "vs/language/typescript/lib/typescriptServices": "/brainpad-classic/vs/language/typescript/lib/typescriptServices.js",
-            "vs/language/typescript/src/mode": "/brainpad-classic/vs/language/typescript/src/mode.js",
-            "vs/language/typescript/src/worker": "/brainpad-classic/vs/language/typescript/src/worker.js",
-            "lzma/lzma_worker-min.js": "/brainpad-classic/lzma/lzma_worker-min.js",
-            "smoothie/smoothie_compressed.js": "/brainpad-classic/smoothie/smoothie_compressed.js",
-            "pxtblockly.js": "/brainpad-classic/pxtblockly.js",
-            "blockly.css": "/brainpad-classic/blockly.css",
-            "rtlblockly.css": "/brainpad-classic/rtlblockly.css"
+            "vs/loader": "/vs/loader.js",
+            "vs/base/worker/workerMain": "/vs/base/worker/workerMain.js",
+            "vs/basic-languages/src/bat": "/vs/basic-languages/src/bat.js",
+            "vs/basic-languages/src/cpp": "/vs/basic-languages/src/cpp.js",
+            "vs/editor/editor.main.css": "/vs/editor/editor.main.css",
+            "vs/editor/editor.main": "/vs/editor/editor.main.js",
+            "vs/editor/editor.main.nls": "/vs/editor/editor.main.nls.js",
+            "vs/language/json/jsonMode": "/vs/language/json/jsonMode.js",
+            "vs/language/json/jsonWorker": "/vs/language/json/jsonWorker.js",
+            "vs/language/typescript/lib/typescriptServices": "/vs/language/typescript/lib/typescriptServices.js",
+            "vs/language/typescript/src/mode": "/vs/language/typescript/src/mode.js",
+            "vs/language/typescript/src/worker": "/vs/language/typescript/src/worker.js",
+            "lzma/lzma_worker-min.js": "/lzma/lzma_worker-min.js",
+            "smoothie/smoothie_compressed.js": "/smoothie/smoothie_compressed.js",
+            "pxtblockly.js": "/pxtblockly.js",
+            "blockly.css": "/blockly.css",
+            "rtlblockly.css": "/rtlblockly.css"
         }
     </script>
 </body>

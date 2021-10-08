@@ -1,72 +1,72 @@
 CACHE MANIFEST
 
 CACHE:
-/brainpad-classic/semantic.js
-/brainpad-classic/main.js
-/brainpad-classic/pxtapp.js
-/brainpad-classic/typescript.js
-/brainpad-classic/marked/marked.min.js
-/brainpad-classic/highlight.js/highlight.pack.js
-/brainpad-classic/jquery.js
-/brainpad-classic/pxtlib.js
-/brainpad-classic/pxtcompiler.js
-/brainpad-classic/pxtblockly.js
-/brainpad-classic/pxtwinrt.js
-/brainpad-classic/pxteditor.js
-/brainpad-classic/pxtsim.js
-/brainpad-classic/pxtembed.js
-/brainpad-classic/pxtworker.js
-/brainpad-classic/pxtweb.js
-/brainpad-classic/blockly.css
-/brainpad-classic/semantic.css
-/brainpad-classic/rtlsemantic.css
+/semantic.js
+/main.js
+/pxtapp.js
+/typescript.js
+/marked/marked.min.js
+/highlight.js/highlight.pack.js
+/jquery.js
+/pxtlib.js
+/pxtcompiler.js
+/pxtblockly.js
+/pxtwinrt.js
+/pxteditor.js
+/pxtsim.js
+/pxtembed.js
+/pxtworker.js
+/pxtweb.js
+/blockly.css
+/semantic.css
+/rtlsemantic.css
 
 
-/brainpad-classic/editor.js
+/editor.js
 
 
 # blockly
-/brainpad-classic/blockly/media/sprites.png
-/brainpad-classic/blockly/media/click.mp3
-/brainpad-classic/blockly/media/disconnect.wav
-/brainpad-classic/blockly/media/delete.mp3
+/blockly/media/sprites.png
+/blockly/media/click.mp3
+/blockly/media/disconnect.wav
+/blockly/media/delete.mp3
 
 # monaco; keep in sync with webapp/public/index.html
-/brainpad-classic/vs/loader.js
-/brainpad-classic/vs/base/worker/workerMain.js
-/brainpad-classic/vs/basic-languages/src/bat.js
-/brainpad-classic/vs/basic-languages/src/cpp.js
-/brainpad-classic/vs/editor/editor.main.css
-/brainpad-classic/vs/editor/editor.main.js
-/brainpad-classic/vs/editor/editor.main.nls.js
-/brainpad-classic/vs/language/json/jsonMode.js
-/brainpad-classic/vs/language/json/jsonWorker.js
-/brainpad-classic/vs/language/typescript/lib/typescriptServices.js
-/brainpad-classic/vs/language/typescript/src/mode.js
-/brainpad-classic/vs/language/typescript/src/worker.js
+/vs/loader.js
+/vs/base/worker/workerMain.js
+/vs/basic-languages/src/bat.js
+/vs/basic-languages/src/cpp.js
+/vs/editor/editor.main.css
+/vs/editor/editor.main.js
+/vs/editor/editor.main.nls.js
+/vs/language/json/jsonMode.js
+/vs/language/json/jsonWorker.js
+/vs/language/typescript/lib/typescriptServices.js
+/vs/language/typescript/src/mode.js
+/vs/language/typescript/src/worker.js
 
 # charts
-/brainpad-classic/smoothie/smoothie_compressed.js
-/brainpad-classic/images/Bars_black.gif
+/smoothie/smoothie_compressed.js
+/images/Bars_black.gif
 
 # ai
-/brainpad-classic/ai.0.js
+/ai.0.js
 
-/brainpad-classic/worker.js
-/brainpad-classic/monacoworker.js
+/worker.js
+/monacoworker.js
 
 # ver Fri Oct 08 2021 09:16:44 GMT-0400 (Eastern Daylight Time)
 
 # target
-/brainpad-classic/docs\static\logo.png
-/brainpad-classic/docs\static\logo.square.png
-/brainpad-classic/docs\static\logo.square.png
-/brainpad-classic/docs\static\logo.square.png
-/brainpad-classic/docs\static\Microsoft-logo_rgb_c-gray-square.png
-/brainpad-classic/docs\static\Microsoft-logo_rgb_c-white.png
-/brainpad-classic/docs\static\hero.jpg
+/docs\static\logo.png
+/docs\static\logo.square.png
+/docs\static\logo.square.png
+/docs\static\logo.square.png
+/docs\static\Microsoft-logo_rgb_c-gray-square.png
+/docs\static\Microsoft-logo_rgb_c-white.png
+/docs\static\hero.jpg
 
-/brainpad-classic/target.js
+/target.js
   
 NETWORK:
 *

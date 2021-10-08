@@ -1,10 +1,10 @@
 CACHE MANIFEST
 
 CACHE:
-/brainpad-classic/bluebird.min.js
-/brainpad-classic/pxtsim.js
-/brainpad-classic/common-sim.js
-/brainpad-classic/sim.js
+/bluebird.min.js
+/pxtsim.js
+/common-sim.js
+/sim.js
 
 NETWORK:
 *
