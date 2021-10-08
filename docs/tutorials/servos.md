@@ -4,43 +4,43 @@
 
 Since the BrainPad has two servo ports we will demonstrate how to use both in Microsoft MakeCode. We will show how to use two different kinds of servos.  
  
-![BrainPad servo ports](/static/images/servo_ports.jpg)
+![BrainPad servo ports](docs/static/images/servo_ports.jpg)
 
 ## Step 2 @unplugged
 
 Servo motors are small DC motors that are controlled using a small circuit and gears to control how it operates. Below is a disassembled view of a simple servo motor. 
  
-![BrainPad servo ports](/static/images/servo_parts.jpg)
+![BrainPad servo ports](docs/static/images/servo_parts.jpg)
 
 ## Step 3 @unplugged
 
 Two common servos are "Positional Rotation Servos" and "Continuous Rotation Servos", they may look the same but they operate very differently. Continuous servos rotate 360 degrees in either direction. Positional servos turn part of the way in about a half a circle, or from 0 to 180 degrees. 90 degrees would place the positional servo's arm in the middle.
  
-![Comparison of Servos](/static/images/servo_motors.gif)
+![Comparison of Servos](docs/static/images/servo_motors.gif)
  
 ## Step 4 @unplugged
 
 Positional servos are often used in radio controlled car steering. Since the motor never has to turn more than 180 degrees a positional servo works great. 
   
-![RC Car Servo](/static/images/rc_positional.jpg)
+![RC Car Servo](docs/static/images/rc_positional.jpg)
 
 ## Step 5 @unplugged
 
 While continuous servos are often used to control the rear wheels since these kind of servos can spin continuously in a circle in either direction.  
 
-![RC Car Servo](/static/images/rc_continuous.jpg)
+![RC Car Servo](docs/static/images/rc_continuous.jpg)
 
 ## Step 6 @unplugged
 
 First let's connect the continuous servo to the BrainPad at the 1st servo port. Connect with the Brown wire down, this is the GND wire. The Red wire is POWER, while the top Yellow wire sends the SIGNAL. 
 
-![Connecting to servo port one](/static/images/servo_port_one.jpg)
+![Connecting to servo port one](docs/static/images/servo_port_one.jpg)
 
 ## Step 7 @unplugged
 
 Next, let's connect the positional servo to the 2nd servo port on the BrainPad. 
 
-![Connecting to servo port two](/static/images/servo_port_two.jpg)
+![Connecting to servo port two](docs/static/images/servo_port_two.jpg)
 
 ## Step 8 @fullscreen
 
@@ -91,4 +91,4 @@ forever(function () {
 
 That's it now download and transfer your code to the Brainpad. The servos will start to move. The continuous servo turning constantly, and the positional servo will move through its various positions.  
 
-![Comparison of Servos](/static/images/servo_motors.gif)
+![Comparison of Servos](docs/static/images/servo_motors.gif)

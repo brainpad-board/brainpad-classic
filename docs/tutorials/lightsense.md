@@ -4,7 +4,7 @@
 
 The BrainPad is equipped with an onboard light sensor. We can use this sensor to trigger an action when the light reaches a certain level. 
 
-![BrainPad Temperature Sensor image](/static/images/light.jpg)
+![BrainPad Temperature Sensor image](docs/static/images/light.jpg)
 
 ## Step 2 @fullscreen
 
@@ -46,7 +46,7 @@ loops.forever(function () {
 
 If you look at the BrainPad simulator, you'll noticed that a new highlight is revealled on top of the Light Sensor. This is where we control the virtual light levels, within our simulator using the mouse. 
 
-![BrainPad Temperature Sensor image](/static/images/lightSensor_Gauge.gif)
+![BrainPad Temperature Sensor image](docs/static/images/lightSensor_Gauge.gif)
 
 ## Step 6 @fullscreen
 

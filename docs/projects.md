@@ -12,7 +12,7 @@ Here are some cool projects that you can build with your @boardname@!
   "label": "BrainPad & Snap Circuits",
   "labelClass": "pink ribbon large",
   "url":"/projects/snap-circuits",
-  "imageUrl":"/static/cp/projects/thumb/snapCircuit_BrainPad.jpg"
+  "imageUrl":"docs/static/cp/projects/thumb/snapCircuit_BrainPad.jpg"
   
 }
 ]

@@ -4,13 +4,13 @@
 
 The BrainPad is equipt with four directional buttons (up, down, left and right) that we can program. In this tutorial we'll use the BrainPad buttons to play a four note song.
 
-![BrainPad buzzer image](/static/images/buttons.jpg)
+![BrainPad buzzer image](docs/static/images/buttons.jpg)
 
 ## Step 2 @unplugged
 
 We use buttons every day to communicate with electronic devices all around us. Even the keyboard on your computer is made up of buttons. 
 
-![BrainPad buzzer image](/static/images/keys.jpg)
+![BrainPad buzzer image](docs/static/images/keys.jpg)
 
 ## Step 3 @fullscreen
 
@@ -141,4 +141,4 @@ input.buttonDown.onEvent(ButtonEvent.Click, function () {
 ## Step 12 @fullscreen
 
 Now let's play a simple song using the BrainPad buttons. 
-![BrainPad buzzer image](/static/images/song.jpg)
+![BrainPad buzzer image](docs/static/images/song.jpg)

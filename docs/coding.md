@@ -13,7 +13,7 @@ Step by step guide to coding your @boardname@.
   "label": "Starting Blocks",
   "labelClass": "pink ribbon large",
   "url":"/tutorials/onStart",
-  "imageUrl":"/static/cp/projects/thumb/onStart.jpg" 
+  "imageUrl":"docs/static/cp/projects/thumb/onStart.jpg" 
 } 
 ,
 {
@@ -23,7 +23,7 @@ Step by step guide to coding your @boardname@.
   "label": "Using Variables",
   "labelClass": "pink ribbon large",
   "url":"/tutorials/variables",
-  "imageUrl":"/static/cp/projects/thumb/variable.jpg"  
+  "imageUrl":"docs/static/cp/projects/thumb/variable.jpg"  
 } 
 ]
 ```

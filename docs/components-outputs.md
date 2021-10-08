@@ -13,7 +13,7 @@ Step by step guide to coding your @boardname@.
   "label": "Light Bulb",
   "labelClass": "pink ribbon large",
   "url":"/tutorials/lights",
-  "imageUrl":"/static/cp/projects/thumb/lightbulb.jpg"  
+  "imageUrl":"docs/static/cp/projects/thumb/lightbulb.jpg"  
 } 
 ,
 {
@@ -23,7 +23,7 @@ Step by step guide to coding your @boardname@.
   "label": "Buzzer",
   "labelClass": "pink ribbon large",
   "url":"/tutorials/buzzer",
-  "imageUrl":"/static/cp/projects/thumb/buzzer.jpg"
+  "imageUrl":"docs/static/cp/projects/thumb/buzzer.jpg"
 } 
 ,
 {
@@ -33,7 +33,7 @@ Step by step guide to coding your @boardname@.
   "label": "Display",
   "labelClass": "pink ribbon large",
   "url":"/tutorials/display",
-  "imageUrl":"/static/cp/projects/thumb/display.jpg"
+  "imageUrl":"docs/static/cp/projects/thumb/display.jpg"
 } 
 ,
 {
@@ -43,7 +43,7 @@ Step by step guide to coding your @boardname@.
   "label": "Servos",
   "labelClass": "pink ribbon large",
   "url":"/tutorials/servos",
-  "imageUrl":"/static/cp/projects/thumb/servos.jpg"
+  "imageUrl":"docs/static/cp/projects/thumb/servos.jpg"
 } 
 ]
 ```

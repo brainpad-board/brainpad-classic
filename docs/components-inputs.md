@@ -13,7 +13,7 @@ Step by step guide to coding your @boardname@.
   "label": "Temperature Sensor",
   "labelClass": "pink ribbon large",
   "url":"/tutorials/temperature",
-  "imageUrl":"/static/cp/projects/thumb/temperature.jpg"
+  "imageUrl":"docs/static/cp/projects/thumb/temperature.jpg"
   
 }
 ,
@@ -24,7 +24,7 @@ Step by step guide to coding your @boardname@.
   "label": "Light Sensor",
   "labelClass": "pink ribbon large",
   "url":"/tutorials/lightsense",
-  "imageUrl":"/static/cp/projects/thumb/light.jpg"
+  "imageUrl":"docs/static/cp/projects/thumb/light.jpg"
   
 }  
 ,
@@ -35,7 +35,7 @@ Step by step guide to coding your @boardname@.
   "label": "Accelerometer",
   "labelClass": "pink ribbon large",
   "url":"/tutorials/accelerometer",
-  "imageUrl":"/static/cp/projects/thumb/accelerometer.jpg"
+  "imageUrl":"docs/static/cp/projects/thumb/accelerometer.jpg"
   
 }
 ,
@@ -46,7 +46,7 @@ Step by step guide to coding your @boardname@.
   "label": "Buttons",
   "labelClass": "pink ribbon large",
   "url":"/tutorials/buttons",
-  "imageUrl":"/static/cp/projects/thumb/buttons.jpg"
+  "imageUrl":"docs/static/cp/projects/thumb/buttons.jpg"
   
 } 
 ]
