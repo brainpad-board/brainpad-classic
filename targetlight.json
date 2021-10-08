@@ -1,0 +1,259 @@
+{
+  "id": "brainpad",
+  "platformid": "codal",
+  "nickname": "brainpad",
+  "name": "GHI Brain Pad",
+  "title": "GHI Brain Pad - Blocks / Javascript editor",
+  "description": "A Blocks / JavaScript code editor for the GHI Brain Pad.",
+  "corepkg": "brainpad",
+  "ignoreDocsErrors": true,
+  "serial": {
+    "useHF2": true,
+    "useEditor": true,
+    "log": true,
+    "noDeploy": true,
+    "editorTheme": {
+      "graphBackground": "#d9d9d9",
+      "lineColors": [
+        "#009DDC",
+        "#FB48C7",
+        "#40bf4a",
+        "#8073E5",
+        "#d25b33"
+      ]
+    }
+  },
+  "simulator": {
+    "autoRun": true,
+    "streams": false,
+    "aspectRatio": 1.8,
+    "parts": false,
+    "boardDefinition": {
+      "visual": "brainpad",
+      "gpioPinBlocks": [
+        [
+          "P0"
+        ],
+        [
+          "P1"
+        ],
+        [
+          "P2"
+        ],
+        [
+          "P3"
+        ],
+        [
+          "P4",
+          "P5",
+          "P6",
+          "P7"
+        ],
+        [
+          "P8",
+          "P9",
+          "P10",
+          "P11",
+          "P12"
+        ],
+        [
+          "P16"
+        ]
+      ],
+      "gpioPinMap": {
+        "P0": "P0",
+        "P1": "P1",
+        "P2": "P2",
+        "P3": "P3",
+        "P4": "P4",
+        "P5": "P5",
+        "P6": "P6",
+        "P7": "P7",
+        "P8": "P8",
+        "P9": "P9",
+        "P10": "P10",
+        "P11": "P11",
+        "P12": "P12",
+        "P13": "P13",
+        "P14": "P14",
+        "P15": "P15",
+        "P16": "P16",
+        "P19": "P19",
+        "P20": "P20"
+      },
+      "i2cPins": {
+        "SDA": "P2",
+        "SCL": "P3"
+      },
+      "analogInPins": [
+        "A0",
+        "A4",
+        "A5"
+      ],
+      "groundPins": [
+        "GND_0",
+        "GND_1",
+        "GND_2"
+      ],
+      "threeVoltPins": [
+        "PWR_0",
+        "PWR_2"
+      ],
+      "attachPowerOnRight": true,
+      "onboardComponents": [
+        "accelerometer",
+        "buttonpair",
+        "speaker",
+        "thermometer",
+        "rgbsensor",
+        "lightsensor",
+        "microphone"
+      ],
+      "useCrocClips": true,
+      "marginWhenBreadboarding": [
+        0,
+        0,
+        80,
+        0
+      ]
+    }
+  },
+  "cloud": {
+    "workspace": false,
+    "packages": true,
+    "sharing": true,
+    "publishing": true,
+    "importing": false,
+    "preferredPackages": [],
+    "githubPackages": true
+  },
+  "compile": {
+    "isNative": true,
+    "useUF2": true,
+    "hasHex": true,
+    "deployDrives": ".*",
+    "deployFileMarker": "INFO.TXT",
+    "driveName": "BrainPad2",
+    "openocdScript": "source [find interface/cmsis-dap.cfg]; source [find target/stm32f4x.cfg]",
+    "flashCodeAlign": 256,
+    "floatingPoint": true,
+    "taggedInts": true,
+    "upgrades": [
+      {
+        "type": "package",
+        "map": {}
+      },
+      {
+        "type": "api",
+        "map": {}
+      }
+    ],
+    "hidSelectors": [
+      {
+        "usagePage": "0xFF97",
+        "usageId": "0x0001",
+        "vid": "0x239A",
+        "pid": "0x0018"
+      },
+      {
+        "usagePage": "0xFF00",
+        "usageId": "0x0001",
+        "vid": "0x239A",
+        "pid": "0x0018"
+      },
+      {
+        "usagePage": "0xFF00",
+        "usageId": "0x0001",
+        "vid": "0x239A",
+        "pid": "0x0019"
+      },
+      {
+        "usagePage": "0xFF97",
+        "usageId": "0x0001",
+        "vid": "0x03EB",
+        "pid": "0x2402"
+      }
+    ],
+    "nativeType": "thumb",
+    "jsRefCounting": false,
+    "vtableShift": 2
+  },
+  "runtime": {
+    "mathBlocks": true,
+    "loopsBlocks": true,
+    "logicBlocks": true,
+    "variablesBlocks": true,
+    "textBlocks": true,
+    "listsBlocks": true,
+    "functionBlocks": true,
+    "onStartNamespace": "loops",
+    "onStartColor": "#40bf4a",
+    "onStartWeight": 100
+  },
+  "compileService": {
+    "buildEngine": "codal",
+    "codalTarget": {
+      "name": "codal-brainpad",
+      "url": "https://github.com/ghi-electronics/codal-brainpad",
+      "branch": "v0.1.0",
+      "type": "git"
+    },
+    "codalBinary": "BRAINPAD",
+    "yottaConfig": {
+      "pxt": {
+        "board": {
+          "id": "BOARD_ID_CPLAY"
+        }
+      }
+    },
+    "githubCorePackage": "lancaster-university/codal",
+    "gittag": "master",
+    "serviceId": "brainpad"
+  },
+  "versions": {
+    "target": "0.21.27",
+    "pxt": "4.3.1"
+  },
+  "blocksprj": {
+    "id": "blocksprj",
+    "config": {
+      "name": "{0}",
+      "dependencies": {
+        "brainpad": "*"
+      },
+      "description": "",
+      "files": [
+        "main.blocks",
+        "main.ts",
+        "README.md"
+      ],
+      "additionalFilePaths": []
+    },
+    "files": {
+      "dal.d.ts": "// Auto-generated. Do not edit.\ndeclare const enum DAL {\n    // built/codal/libraries/codal-core/inc/core/CodalComponent.h\n    DEVICE_ID_BUTTON_A = 1,\n    DEVICE_ID_BUTTON_B = 2,\n    DEVICE_ID_BUTTON_AB = 3,\n    DEVICE_ID_BUTTON_RESET = 4,\n    DEVICE_ID_ACCELEROMETER = 5,\n    DEVICE_ID_COMPASS = 6,\n    DEVICE_ID_DISPLAY = 7,\n    DEVICE_ID_THERMOMETER = 8,\n    DEVICE_ID_RADIO = 9,\n    DEVICE_ID_RADIO_DATA_READY = 10,\n    DEVICE_ID_MULTIBUTTON_ATTACH = 11,\n    DEVICE_ID_SERIAL = 12,\n    DEVICE_ID_GESTURE = 13,\n    DEVICE_ID_SYSTEM_TIMER = 14,\n    DEVICE_ID_SCHEDULER = 15,\n    DEVICE_ID_COMPONENT = 16,\n    DEVICE_ID_LIGHT_SENSOR = 17,\n    DEVICE_ID_TOUCH_SENSOR = 18,\n    DEVICE_ID_SYSTEM_DAC = 19,\n    DEVICE_ID_SYSTEM_MICROPHONE = 20,\n    DEVICE_ID_SYSTEM_LEVEL_DETECTOR = 21,\n    DEVICE_ID_MSC = 22,\n    DEVICE_ID_IO_P0 = 100,\n    DEVICE_ID_MESSAGE_BUS_LISTENER = 1021,\n    DEVICE_ID_NOTIFY_ONE = 1022,\n    DEVICE_ID_NOTIFY = 1023,\n    DEVICE_COMPONENT_RUNNING = 4096,\n    DEVICE_COMPONENT_STATUS_SYSTEM_TICK = 8192,\n    DEVICE_COMPONENT_STATUS_IDLE_TICK = 16384,\n    DEVICE_COMPONENT_LISTENERS_CONFIGURED = 1,\n    DEVICE_COMPONENT_EVT_SYSTEM_TICK = 1,\n    // built/codal/libraries/codal-core/inc/core/CodalFiber.h\n    DEVICE_SCHEDULER_RUNNING = 1,\n    DEVICE_SCHEDULER_IDLE = 2,\n    DEVICE_FIBER_FLAG_FOB = 1,\n    DEVICE_FIBER_FLAG_PARENT = 2,\n    DEVICE_FIBER_FLAG_CHILD = 4,\n    DEVICE_FIBER_FLAG_DO_NOT_PAGE = 8,\n    DEVICE_SCHEDULER_EVT_TICK = 1,\n    DEVICE_SCHEDULER_EVT_IDLE = 2,\n    // built/codal/libraries/codal-core/inc/core/CodalListener.h\n    MESSAGE_BUS_LISTENER_PARAMETERISED = 1,\n    MESSAGE_BUS_LISTENER_METHOD = 2,\n    MESSAGE_BUS_LISTENER_BUSY = 4,\n    MESSAGE_BUS_LISTENER_REENTRANT = 8,\n    MESSAGE_BUS_LISTENER_QUEUE_IF_BUSY = 16,\n    MESSAGE_BUS_LISTENER_DROP_IF_BUSY = 32,\n    MESSAGE_BUS_LISTENER_NONBLOCKING = 64,\n    MESSAGE_BUS_LISTENER_URGENT = 128,\n    MESSAGE_BUS_LISTENER_DELETING = 32768,\n    MESSAGE_BUS_LISTENER_IMMEDIATE = 192,\n    // built/codal/libraries/codal-core/inc/core/ErrorNo.h\n    DEVICE_OK = 0,\n    DEVICE_INVALID_PARAMETER = -1001,\n    DEVICE_NOT_SUPPORTED = -1002,\n    DEVICE_CALIBRATION_IN_PROGRESS = -1003,\n    DEVICE_CALIBRATION_REQUIRED = -1004,\n    DEVICE_NO_RESOURCES = -1005,\n    DEVICE_BUSY = -1006,\n    DEVICE_CANCELLED = -1007,\n    DEVICE_I2C_ERROR = -1010,\n    DEVICE_SERIAL_IN_USE = -1011,\n    DEVICE_NO_DATA = -1012,\n    DEVICE_NOT_IMPLEMENTED = -1013,\n    DEVICE_SPI_ERROR = -1014,\n    DEVICE_OOM = 20,\n    DEVICE_HEAP_ERROR = 30,\n    DEVICE_NULL_DEREFERENCE = 40,\n    DEVICE_USB_ERROR = 50,\n    // built/codal/libraries/codal-core/inc/core/NotifyEvents.h\n    DISPLAY_EVT_FREE = 1,\n    CODAL_SERIAL_EVT_TX_EMPTY = 2,\n    BLE_EVT_SERIAL_TX_EMPTY = 3,\n    DEVICE_NOTIFY_USER_EVENT_BASE = 1024,\n    // built/codal/libraries/codal-core/inc/driver-models/AbstractButton.h\n    DEVICE_BUTTON_EVT_DOWN = 1,\n    DEVICE_BUTTON_EVT_UP = 2,\n    DEVICE_BUTTON_EVT_CLICK = 3,\n    DEVICE_BUTTON_EVT_LONG_CLICK = 4,\n    DEVICE_BUTTON_EVT_HOLD = 5,\n    DEVICE_BUTTON_EVT_DOUBLE_CLICK = 6,\n    DEVICE_BUTTON_LONG_CLICK_TIME = 1000,\n    DEVICE_BUTTON_HOLD_TIME = 1500,\n    DEVICE_BUTTON_STATE = 1,\n    DEVICE_BUTTON_STATE_HOLD_TRIGGERED = 2,\n    DEVICE_BUTTON_STATE_CLICK = 4,\n    DEVICE_BUTTON_STATE_LONG_CLICK = 8,\n    DEVICE_BUTTON_SIGMA_MIN = 0,\n    DEVICE_BUTTON_SIGMA_MAX = 12,\n    DEVICE_BUTTON_SIGMA_THRESH_HI = 8,\n    DEVICE_BUTTON_SIGMA_THRESH_LO = 2,\n    DEVICE_BUTTON_DOUBLE_CLICK_THRESH = 50,\n    DEVICE_BUTTON_SIMPLE_EVENTS = 0,\n    DEVICE_BUTTON_ALL_EVENTS = 1,\n    ACTIVE_LOW = 0,\n    ACTIVE_HIGH = 1,\n    // built/codal/libraries/codal-core/inc/driver-models/Accelerometer.h\n    ACCELEROMETER_IMU_DATA_VALID = 2,\n    ACCELEROMETER_EVT_DATA_UPDATE = 1,\n    ACCELEROMETER_EVT_NONE = 0,\n    ACCELEROMETER_EVT_TILT_UP = 1,\n    ACCELEROMETER_EVT_TILT_DOWN = 2,\n    ACCELEROMETER_EVT_TILT_LEFT = 3,\n    ACCELEROMETER_EVT_TILT_RIGHT = 4,\n    ACCELEROMETER_EVT_FACE_UP = 5,\n    ACCELEROMETER_EVT_FACE_DOWN = 6,\n    ACCELEROMETER_EVT_FREEFALL = 7,\n    ACCELEROMETER_EVT_3G = 8,\n    ACCELEROMETER_EVT_6G = 9,\n    ACCELEROMETER_EVT_8G = 10,\n    ACCELEROMETER_EVT_SHAKE = 11,\n    ACCELEROMETER_REST_TOLERANCE = 200,\n    ACCELEROMETER_TILT_TOLERANCE = 200,\n    ACCELEROMETER_FREEFALL_TOLERANCE = 400,\n    ACCELEROMETER_SHAKE_TOLERANCE = 400,\n    ACCELEROMETER_3G_TOLERANCE = 3072,\n    ACCELEROMETER_6G_TOLERANCE = 6144,\n    ACCELEROMETER_8G_TOLERANCE = 8192,\n    ACCELEROMETER_GESTURE_DAMPING = 5,\n    ACCELEROMETER_SHAKE_DAMPING = 10,\n    ACCELEROMETER_SHAKE_RTX = 30,\n    ACCELEROMETER_SHAKE_COUNT_THRESHOLD = 4,\n    // built/codal/libraries/codal-core/inc/driver-models/Compass.h\n    COMPASS_STATUS_RUNNING = 1,\n    COMPASS_STATUS_CALIBRATED = 2,\n    COMPASS_STATUS_CALIBRATING = 4,\n    COMPASS_STATUS_ADDED_TO_IDLE = 8,\n    COMPASS_EVT_DATA_UPDATE = 1,\n    COMPASS_EVT_CONFIG_NEEDED = 2,\n    COMPASS_EVT_CALIBRATE = 3,\n    COMPASS_EVT_CALIBRATION_NEEDED = 4,\n    // built/codal/libraries/codal-core/inc/driver-models/Pin.h\n    IO_STATUS_DIGITAL_IN = 1,\n    IO_STATUS_DIGITAL_OUT = 2,\n    IO_STATUS_ANALOG_IN = 4,\n    IO_STATUS_ANALOG_OUT = 8,\n    IO_STATUS_TOUCH_IN = 16,\n    IO_STATUS_EVENT_ON_EDGE = 32,\n    IO_STATUS_EVENT_PULSE_ON_EDGE = 64,\n    DEVICE_PIN_MAX_OUTPUT = 1023,\n    DEVICE_PIN_MAX_SERVO_RANGE = 180,\n    DEVICE_PIN_DEFAULT_SERVO_RANGE = 2000,\n    DEVICE_PIN_DEFAULT_SERVO_CENTER = 1500,\n    DEVICE_PIN_EVENT_NONE = 0,\n    DEVICE_PIN_EVENT_ON_EDGE = 1,\n    DEVICE_PIN_EVENT_ON_PULSE = 2,\n    DEVICE_PIN_EVENT_ON_TOUCH = 3,\n    DEVICE_PIN_EVT_RISE = 2,\n    DEVICE_PIN_EVT_FALL = 3,\n    DEVICE_PIN_EVT_PULSE_HI = 4,\n    DEVICE_PIN_EVT_PULSE_LO = 5,\n    PIN_CAPABILITY_DIGITAL = 1,\n    PIN_CAPABILITY_ANALOG = 2,\n    PIN_CAPABILITY_AD = 3,\n    PIN_CAPABILITY_ALL = 3,\n    None = 0,\n    Down = 1,\n    Up = 2,\n    // built/codal/libraries/codal-core/inc/driver-models/SPIFlash.h\n    SPIFLASH_PAGE_SIZE = 256,\n    SPIFLASH_SMALL_ROW_PAGES = 16,\n    SPIFLASH_BIG_ROW_PAGES = 256,\n    // built/codal/libraries/codal-core/inc/driver-models/Serial.h\n    CODAL_SERIAL_DEFAULT_BAUD_RATE = 115200,\n    CODAL_SERIAL_DEFAULT_BUFFER_SIZE = 20,\n    CODAL_SERIAL_EVT_DELIM_MATCH = 1,\n    CODAL_SERIAL_EVT_HEAD_MATCH = 2,\n    CODAL_SERIAL_EVT_RX_FULL = 3,\n    CODAL_SERIAL_RX_IN_USE = 1,\n    CODAL_SERIAL_TX_IN_USE = 2,\n    CODAL_SERIAL_RX_BUFF_INIT = 4,\n    CODAL_SERIAL_TX_BUFF_INIT = 8,\n    ASYNC = 0,\n    SYNC_SPINWAIT = 1,\n    SYNC_SLEEP = 2,\n    RxInterrupt = 0,\n    TxInterrupt = 1,\n    // built/codal/libraries/codal-core/inc/driver-models/Timer.h\n    CODAL_TIMER_DEFAULT_EVENT_LIST_SIZE = 10,\n    // built/codal/libraries/codal-core/inc/drivers/AnalogSensor.h\n    ANALOG_THRESHOLD_LOW = 1,\n    ANALOG_THRESHOLD_HIGH = 2,\n    ANALOG_SENSOR_UPDATE_NEEDED = 3,\n    ANALOG_SENSOR_INITIALISED = 1,\n    ANALOG_SENSOR_HIGH_THRESHOLD_PASSED = 2,\n    ANALOG_SENSOR_LOW_THRESHOLD_PASSED = 4,\n    ANALOG_SENSOR_LOW_THRESHOLD_ENABLED = 8,\n    ANALOG_SENSOR_HIGH_THRESHOLD_ENABLED = 16,\n    // built/codal/libraries/codal-core/inc/drivers/AnimatedDisplay.h\n    DISPLAY_EVT_ANIMATION_COMPLETE = 1,\n    DISPLAY_DEFAULT_AUTOCLEAR = 1,\n    DISPLAY_SPACING = 1,\n    DISPLAY_ANIMATE_DEFAULT_POS = -255,\n    DISPLAY_DEFAULT_SCROLL_SPEED = 120,\n    DISPLAY_DEFAULT_SCROLL_STRIDE = -1,\n    DISPLAY_DEFAULT_PRINT_SPEED = 400,\n    ANIMATION_MODE_NONE = 0,\n    ANIMATION_MODE_STOPPED = 1,\n    ANIMATION_MODE_SCROLL_TEXT = 2,\n    ANIMATION_MODE_PRINT_TEXT = 3,\n    ANIMATION_MODE_SCROLL_IMAGE = 4,\n    ANIMATION_MODE_ANIMATE_IMAGE = 5,\n    ANIMATION_MODE_ANIMATE_IMAGE_WITH_CLEAR = 6,\n    ANIMATION_MODE_PRINT_CHARACTER = 7,\n    // built/codal/libraries/codal-core/inc/drivers/FAT.h\n    FAT_RESERVED_SECTORS = 1,\n    FAT_ROOT_DIR_SECTORS = 4,\n    // built/codal/libraries/codal-core/inc/drivers/HID.h\n    HID_REQUEST_GET_REPORT = 1,\n    HID_REQUEST_GET_IDLE = 2,\n    HID_REQUEST_GET_PROTOCOL = 3,\n    HID_REQUEST_SET_REPORT = 9,\n    HID_REQUEST_SET_IDLE = 10,\n    HID_REQUEST_SET_PROTOCOL = 11,\n    // built/codal/libraries/codal-core/inc/drivers/HIDKeyboard.h\n    HID_KEYBOARD_NUM_REPORTS = 3,\n    HID_KEYBOARD_REPORT_GENERIC = 1,\n    HID_KEYBOARD_REPORT_CONSUMER = 2,\n    HID_KEYBOARD_KEYSTATE_SIZE_GENERIC = 8,\n    HID_KEYBOARD_KEYSTATE_SIZE_CONSUMER = 2,\n    HID_KEYBOARD_MODIFIER_OFFSET = 2,\n    HID_KEYBOARD_DELAY_DEFAULT = 10,\n    PressKey = 0,\n    ReleaseKey = 1,\n    // built/codal/libraries/codal-core/inc/drivers/KeyMap.h\n    KEYMAP_ALL_KEYS_UP_Val = 1,\n    KEYMAP_ALL_KEYS_UP_POS = 28,\n    KEYMAP_NORMAL_KEY_Val = 0,\n    KEYMAP_MODIFIER_KEY_Val = 1,\n    KEYMAP_MODIFIER_POS = 29,\n    KEYMAP_MEDIA_KEY_Val = 1,\n    KEYMAP_MEDIA_POS = 30,\n    KEYMAP_KEY_UP_Val = 0,\n    KEYMAP_KEY_DOWN_Val = 1,\n    KEYMAP_KEY_DOWN_POS = 31,\n    // built/codal/libraries/codal-core/inc/drivers/LEDMatrix.h\n    LED_MATRIX_GREYSCALE_BIT_DEPTH = 8,\n    LED_MATRIX_EVT_LIGHT_SENSE = 2,\n    LED_MATRIX_EVT_FRAME_TIMEOUT = 3,\n    LED_MATRIX_MINIMUM_BRIGHTNESS = 1,\n    LED_MATRIX_MAXIMUM_BRIGHTNESS = 255,\n    LED_MATRIX_DEFAULT_BRIGHTNESS = 255,\n    DISPLAY_MODE_BLACK_AND_WHITE = 0,\n    DISPLAY_MODE_GREYSCALE = 1,\n    DISPLAY_MODE_BLACK_AND_WHITE_LIGHT_SENSE = 2,\n    MATRIX_DISPLAY_ROTATION_0 = 0,\n    MATRIX_DISPLAY_ROTATION_90 = 1,\n    MATRIX_DISPLAY_ROTATION_180 = 2,\n    MATRIX_DISPLAY_ROTATION_270 = 3,\n    NO_CONN = 0,\n    // built/codal/libraries/codal-core/inc/drivers/MultiButton.h\n    MULTI_BUTTON_STATE_1 = 1,\n    MULTI_BUTTON_STATE_2 = 2,\n    MULTI_BUTTON_HOLD_TRIGGERED_1 = 4,\n    MULTI_BUTTON_HOLD_TRIGGERED_2 = 8,\n    MULTI_BUTTON_SUPRESSED_1 = 16,\n    MULTI_BUTTON_SUPRESSED_2 = 32,\n    MULTI_BUTTON_ATTACHED = 64,\n    // built/codal/libraries/codal-core/inc/drivers/TouchButton.h\n    TOUCH_BUTTON_CALIBRATION_PERIOD = 10,\n    TOUCH_BUTTON_CALIBRATION_LINEAR_OFFSET = 2,\n    TOUCH_BUTTON_CALIBRATION_PERCENTAGE_OFFSET = 5,\n    TOUCH_BUTTON_CALIBRATING = 16,\n    // built/codal/libraries/codal-core/inc/drivers/TouchSensor.h\n    TOUCH_SENSOR_MAX_BUTTONS = 10,\n    TOUCH_SENSOR_SAMPLE_PERIOD = 50,\n    TOUCH_SENSE_SAMPLE_MAX = 1000,\n    TOUCH_SENSOR_UPDATE_NEEDED = 1,\n    // built/codal/libraries/codal-core/inc/drivers/USB_HID_Keys.h\n    KEY_MOD_LCTRL = 1,\n    KEY_MOD_LSHIFT = 2,\n    KEY_MOD_LALT = 4,\n    KEY_MOD_LMETA = 8,\n    KEY_MOD_RCTRL = 16,\n    KEY_MOD_RSHIFT = 32,\n    KEY_MOD_RALT = 64,\n    KEY_MOD_RMETA = 128,\n    KEY_NONE = 0,\n    KEY_ERR_OVF = 1,\n    KEY_A = 4,\n    KEY_B = 5,\n    KEY_C = 6,\n    KEY_D = 7,\n    KEY_E = 8,\n    KEY_F = 9,\n    KEY_G = 10,\n    KEY_H = 11,\n    KEY_I = 12,\n    KEY_J = 13,\n    KEY_K = 14,\n    KEY_L = 15,\n    KEY_M = 16,\n    KEY_N = 17,\n    KEY_O = 18,\n    KEY_P = 19,\n    KEY_Q = 20,\n    KEY_R = 21,\n    KEY_S = 22,\n    KEY_T = 23,\n    KEY_U = 24,\n    KEY_V = 25,\n    KEY_W = 26,\n    KEY_X = 27,\n    KEY_Y = 28,\n    KEY_Z = 29,\n    KEY_1 = 30,\n    KEY_2 = 31,\n    KEY_3 = 32,\n    KEY_4 = 33,\n    KEY_5 = 34,\n    KEY_6 = 35,\n    KEY_7 = 36,\n    KEY_8 = 37,\n    KEY_9 = 38,\n    KEY_0 = 39,\n    KEY_ENTER = 40,\n    KEY_ESC = 41,\n    KEY_BACKSPACE = 42,\n    KEY_TAB = 43,\n    KEY_SPACE = 44,\n    KEY_MINUS = 45,\n    KEY_EQUAL = 46,\n    KEY_LEFTBRACE = 47,\n    KEY_RIGHTBRACE = 48,\n    KEY_BACKSLASH = 49,\n    KEY_HASHTILDE = 50,\n    KEY_SEMICOLON = 51,\n    KEY_APOSTROPHE = 52,\n    KEY_GRAVE = 53,\n    KEY_COMMA = 54,\n    KEY_DOT = 55,\n    KEY_SLASH = 56,\n    KEY_CAPSLOCK = 57,\n    KEY_F1 = 58,\n    KEY_F2 = 59,\n    KEY_F3 = 60,\n    KEY_F4 = 61,\n    KEY_F5 = 62,\n    KEY_F6 = 63,\n    KEY_F7 = 64,\n    KEY_F8 = 65,\n    KEY_F9 = 66,\n    KEY_F10 = 67,\n    KEY_F11 = 68,\n    KEY_F12 = 69,\n    KEY_SYSRQ = 70,\n    KEY_SCROLLLOCK = 71,\n    KEY_PAUSE = 72,\n    KEY_INSERT = 73,\n    KEY_HOME = 74,\n    KEY_PAGEUP = 75,\n    KEY_DELETE = 76,\n    KEY_END = 77,\n    KEY_PAGEDOWN = 78,\n    KEY_RIGHT = 79,\n    KEY_LEFT = 80,\n    KEY_DOWN = 81,\n    KEY_UP = 82,\n    KEY_NUMLOCK = 83,\n    KEY_KPSLASH = 84,\n    KEY_KPASTERISK = 85,\n    KEY_KPMINUS = 86,\n    KEY_KPPLUS = 87,\n    KEY_KPENTER = 88,\n    KEY_KP1 = 89,\n    KEY_KP2 = 90,\n    KEY_KP3 = 91,\n    KEY_KP4 = 92,\n    KEY_KP5 = 93,\n    KEY_KP6 = 94,\n    KEY_KP7 = 95,\n    KEY_KP8 = 96,\n    KEY_KP9 = 97,\n    KEY_KP0 = 98,\n    KEY_KPDOT = 99,\n    KEY_102ND = 100,\n    KEY_COMPOSE = 101,\n    KEY_POWER = 102,\n    KEY_KPEQUAL = 103,\n    KEY_F13 = 104,\n    KEY_F14 = 105,\n    KEY_F15 = 106,\n    KEY_F16 = 107,\n    KEY_F17 = 108,\n    KEY_F18 = 109,\n    KEY_F19 = 110,\n    KEY_F20 = 111,\n    KEY_F21 = 112,\n    KEY_F22 = 113,\n    KEY_F23 = 114,\n    KEY_F24 = 115,\n    KEY_OPEN = 116,\n    KEY_HELP = 117,\n    KEY_PROPS = 118,\n    KEY_FRONT = 119,\n    KEY_STOP = 120,\n    KEY_AGAIN = 121,\n    KEY_UNDO = 122,\n    KEY_CUT = 123,\n    KEY_COPY = 124,\n    KEY_PASTE = 125,\n    KEY_FIND = 126,\n    KEY_MUTE = 127,\n    KEY_VOLUMEUP = 128,\n    KEY_VOLUMEDOWN = 129,\n    KEY_KPCOMMA = 133,\n    KEY_RO = 135,\n    KEY_KATAKANAHIRAGANA = 136,\n    KEY_YEN = 137,\n    KEY_HENKAN = 138,\n    KEY_MUHENKAN = 139,\n    KEY_KPJPCOMMA = 140,\n    KEY_HANGEUL = 144,\n    KEY_HANJA = 145,\n    KEY_KATAKANA = 146,\n    KEY_HIRAGANA = 147,\n    KEY_ZENKAKUHANKAKU = 148,\n    KEY_KPLEFTPAREN = 182,\n    KEY_KPRIGHTPAREN = 183,\n    KEY_LEFTCTRL = 224,\n    KEY_LEFTSHIFT = 225,\n    KEY_LEFTALT = 226,\n    KEY_LEFTMETA = 227,\n    KEY_RIGHTCTRL = 228,\n    KEY_RIGHTSHIFT = 229,\n    KEY_RIGHTALT = 230,\n    KEY_RIGHTMETA = 231,\n    KEY_MEDIA_PLAYPAUSE = 232,\n    KEY_MEDIA_STOPCD = 233,\n    KEY_MEDIA_PREVIOUSSONG = 234,\n    KEY_MEDIA_NEXTSONG = 235,\n    KEY_MEDIA_EJECTCD = 236,\n    KEY_MEDIA_VOLUMEUP = 237,\n    KEY_MEDIA_VOLUMEDOWN = 238,\n    KEY_MEDIA_MUTE = 239,\n    KEY_MEDIA_WWW = 240,\n    KEY_MEDIA_BACK = 241,\n    KEY_MEDIA_FORWARD = 242,\n    KEY_MEDIA_STOP = 243,\n    KEY_MEDIA_FIND = 244,\n    KEY_MEDIA_SCROLLUP = 245,\n    KEY_MEDIA_SCROLLDOWN = 246,\n    KEY_MEDIA_EDIT = 247,\n    KEY_MEDIA_SLEEP = 248,\n    KEY_MEDIA_COFFEE = 249,\n    KEY_MEDIA_REFRESH = 250,\n    KEY_MEDIA_CALC = 251,\n    // built/codal/libraries/codal-core/inc/drivers/uf2format.h\n    UF2FORMAT_H = 1,\n    APP_START_ADDRESS = 8192,\n    UF2_FLAG_NOFLASH = 1,\n    // built/codal/libraries/codal-core/inc/streams/DataStream.h\n    DATASTREAM_MAXIMUM_BUFFERS = 1,\n    // built/codal/libraries/codal-core/inc/streams/LevelDetector.h\n    LEVEL_THRESHOLD_LOW = 1,\n    LEVEL_THRESHOLD_HIGH = 2,\n    LEVEL_DETECTOR_INITIALISED = 1,\n    LEVEL_DETECTOR_HIGH_THRESHOLD_PASSED = 2,\n    LEVEL_DETECTOR_LOW_THRESHOLD_PASSED = 4,\n    LEVEL_DETECTOR_DEFAULT_WINDOW_SIZE = 128,\n    // built/codal/libraries/codal-core/inc/streams/Synthesizer.h\n    SYNTHESIZER_SAMPLE_RATE = 44100,\n    TONE_WIDTH = 1024,\n    // built/codal/libraries/codal-core/inc/types/BitmapFont.h\n    BITMAP_FONT_WIDTH = 5,\n    BITMAP_FONT_HEIGHT = 5,\n    BITMAP_FONT_ASCII_START = 32,\n    BITMAP_FONT_ASCII_END = 126,\n    // built/codal/libraries/codal-core/inc/types/CoordinateSystem.h\n    COORDINATE_SPACE_ROTATED_0 = 0,\n    COORDINATE_SPACE_ROTATED_90 = 1,\n    COORDINATE_SPACE_ROTATED_180 = 2,\n    COORDINATE_SPACE_ROTATED_270 = 3,\n    RAW = 0,\n    SIMPLE_CARTESIAN = 1,\n    NORTH_EAST_DOWN = 2,\n    NORTH_EAST_UP = 3,\n    // built/codal/libraries/codal-core/inc/types/Event.h\n    DEVICE_ID_ANY = 0,\n    DEVICE_EVT_ANY = 0,\n    CREATE_ONLY = 0,\n    CREATE_AND_FIRE = 1,\n    DEVICE_EVENT_DEFAULT_LAUNCH_MODE = 1,\n    // built/codal/libraries/codal-core/inc/types/RefCounted.h\n    REF_TAG_STRING = 1,\n    REF_TAG_BUFFER = 2,\n    REF_TAG_IMAGE = 3,\n    REF_TAG_USER = 32,\n    // built/codal/pxtapp/accelerometer/axis.h\n    ACC_ROTATION = 0,\n    // built/codal/pxtapp/hf2dbg.h\n    HF2DBG_H = 1,\n    // built/codal/pxtapp/pins.h\n    CFG_PIN_ACCELEROMETER_INT = 1,\n    CFG_PIN_ACCELEROMETER_SCL = 2,\n    CFG_PIN_ACCELEROMETER_SDA = 3,\n    CFG_PIN_BTN_A = 4,\n    CFG_PIN_BTN_B = 5,\n    CFG_PIN_BTN_SLIDE = 6,\n    CFG_PIN_DOTSTAR_CLOCK = 7,\n    CFG_PIN_DOTSTAR_DATA = 8,\n    CFG_PIN_FLASH_CS = 9,\n    CFG_PIN_FLASH_MISO = 10,\n    CFG_PIN_FLASH_MOSI = 11,\n    CFG_PIN_FLASH_SCK = 12,\n    CFG_PIN_LED = 13,\n    CFG_PIN_LIGHT = 14,\n    CFG_PIN_MICROPHONE = 15,\n    CFG_PIN_MIC_CLOCK = 16,\n    CFG_PIN_MIC_DATA = 17,\n    CFG_PIN_MISO = 18,\n    CFG_PIN_MOSI = 19,\n    CFG_PIN_NEOPIXEL = 20,\n    CFG_PIN_RX = 21,\n    CFG_PIN_RXLED = 22,\n    CFG_PIN_SCK = 23,\n    CFG_PIN_SCL = 24,\n    CFG_PIN_SDA = 25,\n    CFG_PIN_SPEAKER_AMP = 26,\n    CFG_PIN_TEMPERATURE = 27,\n    CFG_PIN_TX = 28,\n    CFG_PIN_TXLED = 29,\n    CFG_PIN_IR_OUT = 30,\n    CFG_PIN_IR_IN = 31,\n    CFG_PIN_DISPLAY_SCK = 32,\n    CFG_PIN_DISPLAY_MISO = 33,\n    CFG_PIN_DISPLAY_MOSI = 34,\n    CFG_PIN_DISPLAY_CS = 35,\n    CFG_PIN_DISPLAY_DC = 36,\n    CFG_DISPLAY_WIDTH = 37,\n    CFG_DISPLAY_HEIGHT = 38,\n    CFG_DISPLAY_CFG0 = 39,\n    CFG_DISPLAY_CFG1 = 40,\n    CFG_DISPLAY_CFG2 = 41,\n    CFG_DISPLAY_CFG3 = 42,\n    CFG_PIN_DISPLAY_RST = 43,\n    CFG_PIN_DISPLAY_BL = 44,\n\n    CFG_PIN_AN = 60,\n    CFG_PIN_RST = 61,\n    CFG_PIN_CS = 62,\n    CFG_PIN_PWM = 63,\n    CFG_PIN_INT = 64,\n\n    CFG_PIN_A0 = 100,\n    CFG_PIN_A1 = 101,\n    CFG_PIN_A2 = 102,\n    CFG_PIN_A3 = 103,\n    CFG_PIN_A4 = 104,\n    CFG_PIN_A5 = 105,\n    CFG_PIN_A6 = 106,\n    CFG_PIN_A7 = 107,\n    CFG_PIN_A8 = 108,\n    CFG_PIN_A9 = 109,\n    CFG_PIN_A10 = 110,\n    CFG_PIN_A11 = 111,\n    CFG_PIN_A12 = 112,\n    CFG_PIN_A13 = 113,\n    CFG_PIN_A14 = 114,\n    CFG_PIN_A15 = 115,\n    CFG_PIN_D0 = 150,\n    CFG_PIN_D1 = 151,\n    CFG_PIN_D2 = 152,\n    CFG_PIN_D3 = 153,\n    CFG_PIN_D4 = 154,\n    CFG_PIN_D5 = 155,\n    CFG_PIN_D6 = 156,\n    CFG_PIN_D7 = 157,\n    CFG_PIN_D8 = 158,\n    CFG_PIN_D9 = 159,\n    CFG_PIN_D10 = 160,\n    CFG_PIN_D11 = 161,\n    CFG_PIN_D12 = 162,\n    CFG_PIN_D13 = 163,\n    CFG_PIN_D14 = 164,\n    CFG_PIN_D15 = 165,\n    CFG_NUM_NEOPIXELS = 200,\n    CFG_NUM_DOTSTARS = 201,\n    CFG_DEFAULT_BUTTON_MODE = 202,\n    CFG_SWD_ENABLED = 203,\n    CFG_FLASH_BYTES = 204,\n    BUTTON_ACTIVE_HIGH_PULL_DOWN = 17,\n    BUTTON_ACTIVE_HIGH_PULL_UP = 33,\n    BUTTON_ACTIVE_HIGH_PULL_NONE = 49,\n    BUTTON_ACTIVE_LOW_PULL_DOWN = 16,\n    BUTTON_ACTIVE_LOW_PULL_UP = 32,\n    BUTTON_ACTIVE_LOW_PULL_NONE = 48,\n    // built/codal/pxtapp/platform.h\n    PAGE_SIZE = 256,\n    DEV_NUM_PINS = 48,\n    IMAGE_BITS = 1,\n    LCD_WIDTH = 128,\n    LCD_HEIGHT = 64,\n    TEMPERATURE_NOMINAL_VALUE = 25,\n    TEMPERATURE_NOMINAL_READING = 10000,\n    TEMPERATURE_BETA = 3380,\n    TEMPERATURE_SERIES_RESISTOR = 10000,\n    LIGHTSENSOR_SENSITIVITY = 868,\n    LIGHTSENSOR_LOW_THRESHOLD = 128,\n    LIGHTSENSOR_HIGH_THRESHOLD = 896,\n    PA_0 = 0,\n    PA_1 = 1,\n    PA_2 = 2,\n    PA_3 = 3,\n    PA_4 = 4,\n    PA_5 = 5,\n    PA_6 = 6,\n    PA_7 = 7,\n    PA_8 = 8,\n    PA_9 = 9,\n    PA_10 = 10,\n    PA_11 = 11,\n    PA_12 = 12,\n    PA_13 = 13,\n    PA_14 = 14,\n    PA_15 = 15,\n    PB_0 = 16,\n    PB_1 = 17,\n    PB_2 = 18,\n    PB_3 = 19,\n    PB_4 = 20,\n    PB_5 = 21,\n    PB_6 = 22,\n    PB_7 = 23,\n    PB_8 = 24,\n    PB_9 = 25,\n    PB_10 = 26,\n    PB_12 = 28,\n    PB_13 = 29,\n    PB_14 = 30,\n    PB_15 = 31,\n    PC_0 = 32,\n    PC_1 = 33,\n    PC_2 = 34,\n    PC_3 = 35,\n    PC_4 = 36,\n    PC_5 = 37,\n    PC_6 = 38,\n    PC_7 = 39,\n    PC_8 = 40,\n    PC_9 = 41,\n    PC_10 = 42,\n    PC_11 = 43,\n    PC_12 = 44,\n    PC_13 = 45,\n    PC_14 = 46,\n    PC_15 = 47,\n    PD_2 = 50,\n    PH_0 = 112,\n    PH_1 = 113,\n    // built/codal/pxtapp/pxt.h\n    DEVICE_ID_BUTTON_SLIDE = 3000,\n    DEVICE_ID_MICROPHONE = 3001,\n    DEVICE_ID_FIRST_BUTTON = 4000,\n    DEVICE_ID_FIRST_TOUCHBUTTON = 4100,\n    // built/codal/pxtapp/pxtbase.h\n    MEMDBG_ENABLED = 0,\n    PXT_VTABLE_SHIFT = 2,\n    Int8LE = 1,\n    UInt8LE = 2,\n    Int16LE = 3,\n    UInt16LE = 4,\n    Int32LE = 5,\n    Int8BE = 6,\n    UInt8BE = 7,\n    Int16BE = 8,\n    UInt16BE = 9,\n    Int32BE = 10,\n    UInt32LE = 11,\n    UInt32BE = 12,\n    Float32LE = 13,\n    Float64LE = 14,\n    Float32BE = 15,\n    Float64BE = 16,\n    Undefined = 0,\n    Boolean = 1,\n    Number = 2,\n    String = 3,\n    Object = 4,\n    Function = 5,\n    // built/codal/pxtapp/pxtconfig.h\n    PXT_VM = 0,\n    // built/codal/pxtapp/uf2hid.h\n    UF2_HID_H = 1,\n}\n",
+      "main.blocks": "<xml xmlns=\"http://www.w3.org/1999/xhtml\">\n  <block type=\"pxt-on-start\"></block>\n  <block type=\"forever\"></block>\n</xml>",
+      "main.ts": "\n",
+      "README.md": ""
+    }
+  },
+  "tsprj": {
+    "id": "tsprj",
+    "config": {
+      "name": "{0}",
+      "dependencies": {
+        "brainpad": "*"
+      },
+      "description": "",
+      "files": [
+        "main.ts",
+        "README.md"
+      ],
+      "additionalFilePaths": []
+    },
+    "files": {
+      "dal.d.ts": "// Auto-generated. Do not edit.\ndeclare const enum DAL {\n    // built/codal/libraries/codal-core/inc/core/CodalComponent.h\n    DEVICE_ID_BUTTON_A = 1,\n    DEVICE_ID_BUTTON_B = 2,\n    DEVICE_ID_BUTTON_AB = 3,\n    DEVICE_ID_BUTTON_RESET = 4,\n    DEVICE_ID_ACCELEROMETER = 5,\n    DEVICE_ID_COMPASS = 6,\n    DEVICE_ID_DISPLAY = 7,\n    DEVICE_ID_THERMOMETER = 8,\n    DEVICE_ID_RADIO = 9,\n    DEVICE_ID_RADIO_DATA_READY = 10,\n    DEVICE_ID_MULTIBUTTON_ATTACH = 11,\n    DEVICE_ID_SERIAL = 12,\n    DEVICE_ID_GESTURE = 13,\n    DEVICE_ID_SYSTEM_TIMER = 14,\n    DEVICE_ID_SCHEDULER = 15,\n    DEVICE_ID_COMPONENT = 16,\n    DEVICE_ID_LIGHT_SENSOR = 17,\n    DEVICE_ID_TOUCH_SENSOR = 18,\n    DEVICE_ID_SYSTEM_DAC = 19,\n    DEVICE_ID_SYSTEM_MICROPHONE = 20,\n    DEVICE_ID_SYSTEM_LEVEL_DETECTOR = 21,\n    DEVICE_ID_MSC = 22,\n    DEVICE_ID_IO_P0 = 100,\n    DEVICE_ID_MESSAGE_BUS_LISTENER = 1021,\n    DEVICE_ID_NOTIFY_ONE = 1022,\n    DEVICE_ID_NOTIFY = 1023,\n    DEVICE_COMPONENT_RUNNING = 4096,\n    DEVICE_COMPONENT_STATUS_SYSTEM_TICK = 8192,\n    DEVICE_COMPONENT_STATUS_IDLE_TICK = 16384,\n    DEVICE_COMPONENT_LISTENERS_CONFIGURED = 1,\n    DEVICE_COMPONENT_EVT_SYSTEM_TICK = 1,\n    // built/codal/libraries/codal-core/inc/core/CodalFiber.h\n    DEVICE_SCHEDULER_RUNNING = 1,\n    DEVICE_SCHEDULER_IDLE = 2,\n    DEVICE_FIBER_FLAG_FOB = 1,\n    DEVICE_FIBER_FLAG_PARENT = 2,\n    DEVICE_FIBER_FLAG_CHILD = 4,\n    DEVICE_FIBER_FLAG_DO_NOT_PAGE = 8,\n    DEVICE_SCHEDULER_EVT_TICK = 1,\n    DEVICE_SCHEDULER_EVT_IDLE = 2,\n    // built/codal/libraries/codal-core/inc/core/CodalListener.h\n    MESSAGE_BUS_LISTENER_PARAMETERISED = 1,\n    MESSAGE_BUS_LISTENER_METHOD = 2,\n    MESSAGE_BUS_LISTENER_BUSY = 4,\n    MESSAGE_BUS_LISTENER_REENTRANT = 8,\n    MESSAGE_BUS_LISTENER_QUEUE_IF_BUSY = 16,\n    MESSAGE_BUS_LISTENER_DROP_IF_BUSY = 32,\n    MESSAGE_BUS_LISTENER_NONBLOCKING = 64,\n    MESSAGE_BUS_LISTENER_URGENT = 128,\n    MESSAGE_BUS_LISTENER_DELETING = 32768,\n    MESSAGE_BUS_LISTENER_IMMEDIATE = 192,\n    // built/codal/libraries/codal-core/inc/core/ErrorNo.h\n    DEVICE_OK = 0,\n    DEVICE_INVALID_PARAMETER = -1001,\n    DEVICE_NOT_SUPPORTED = -1002,\n    DEVICE_CALIBRATION_IN_PROGRESS = -1003,\n    DEVICE_CALIBRATION_REQUIRED = -1004,\n    DEVICE_NO_RESOURCES = -1005,\n    DEVICE_BUSY = -1006,\n    DEVICE_CANCELLED = -1007,\n    DEVICE_I2C_ERROR = -1010,\n    DEVICE_SERIAL_IN_USE = -1011,\n    DEVICE_NO_DATA = -1012,\n    DEVICE_NOT_IMPLEMENTED = -1013,\n    DEVICE_SPI_ERROR = -1014,\n    DEVICE_OOM = 20,\n    DEVICE_HEAP_ERROR = 30,\n    DEVICE_NULL_DEREFERENCE = 40,\n    DEVICE_USB_ERROR = 50,\n    // built/codal/libraries/codal-core/inc/core/NotifyEvents.h\n    DISPLAY_EVT_FREE = 1,\n    CODAL_SERIAL_EVT_TX_EMPTY = 2,\n    BLE_EVT_SERIAL_TX_EMPTY = 3,\n    DEVICE_NOTIFY_USER_EVENT_BASE = 1024,\n    // built/codal/libraries/codal-core/inc/driver-models/AbstractButton.h\n    DEVICE_BUTTON_EVT_DOWN = 1,\n    DEVICE_BUTTON_EVT_UP = 2,\n    DEVICE_BUTTON_EVT_CLICK = 3,\n    DEVICE_BUTTON_EVT_LONG_CLICK = 4,\n    DEVICE_BUTTON_EVT_HOLD = 5,\n    DEVICE_BUTTON_EVT_DOUBLE_CLICK = 6,\n    DEVICE_BUTTON_LONG_CLICK_TIME = 1000,\n    DEVICE_BUTTON_HOLD_TIME = 1500,\n    DEVICE_BUTTON_STATE = 1,\n    DEVICE_BUTTON_STATE_HOLD_TRIGGERED = 2,\n    DEVICE_BUTTON_STATE_CLICK = 4,\n    DEVICE_BUTTON_STATE_LONG_CLICK = 8,\n    DEVICE_BUTTON_SIGMA_MIN = 0,\n    DEVICE_BUTTON_SIGMA_MAX = 12,\n    DEVICE_BUTTON_SIGMA_THRESH_HI = 8,\n    DEVICE_BUTTON_SIGMA_THRESH_LO = 2,\n    DEVICE_BUTTON_DOUBLE_CLICK_THRESH = 50,\n    DEVICE_BUTTON_SIMPLE_EVENTS = 0,\n    DEVICE_BUTTON_ALL_EVENTS = 1,\n    ACTIVE_LOW = 0,\n    ACTIVE_HIGH = 1,\n    // built/codal/libraries/codal-core/inc/driver-models/Accelerometer.h\n    ACCELEROMETER_IMU_DATA_VALID = 2,\n    ACCELEROMETER_EVT_DATA_UPDATE = 1,\n    ACCELEROMETER_EVT_NONE = 0,\n    ACCELEROMETER_EVT_TILT_UP = 1,\n    ACCELEROMETER_EVT_TILT_DOWN = 2,\n    ACCELEROMETER_EVT_TILT_LEFT = 3,\n    ACCELEROMETER_EVT_TILT_RIGHT = 4,\n    ACCELEROMETER_EVT_FACE_UP = 5,\n    ACCELEROMETER_EVT_FACE_DOWN = 6,\n    ACCELEROMETER_EVT_FREEFALL = 7,\n    ACCELEROMETER_EVT_3G = 8,\n    ACCELEROMETER_EVT_6G = 9,\n    ACCELEROMETER_EVT_8G = 10,\n    ACCELEROMETER_EVT_SHAKE = 11,\n    ACCELEROMETER_REST_TOLERANCE = 200,\n    ACCELEROMETER_TILT_TOLERANCE = 200,\n    ACCELEROMETER_FREEFALL_TOLERANCE = 400,\n    ACCELEROMETER_SHAKE_TOLERANCE = 400,\n    ACCELEROMETER_3G_TOLERANCE = 3072,\n    ACCELEROMETER_6G_TOLERANCE = 6144,\n    ACCELEROMETER_8G_TOLERANCE = 8192,\n    ACCELEROMETER_GESTURE_DAMPING = 5,\n    ACCELEROMETER_SHAKE_DAMPING = 10,\n    ACCELEROMETER_SHAKE_RTX = 30,\n    ACCELEROMETER_SHAKE_COUNT_THRESHOLD = 4,\n    // built/codal/libraries/codal-core/inc/driver-models/Compass.h\n    COMPASS_STATUS_RUNNING = 1,\n    COMPASS_STATUS_CALIBRATED = 2,\n    COMPASS_STATUS_CALIBRATING = 4,\n    COMPASS_STATUS_ADDED_TO_IDLE = 8,\n    COMPASS_EVT_DATA_UPDATE = 1,\n    COMPASS_EVT_CONFIG_NEEDED = 2,\n    COMPASS_EVT_CALIBRATE = 3,\n    COMPASS_EVT_CALIBRATION_NEEDED = 4,\n    // built/codal/libraries/codal-core/inc/driver-models/Pin.h\n    IO_STATUS_DIGITAL_IN = 1,\n    IO_STATUS_DIGITAL_OUT = 2,\n    IO_STATUS_ANALOG_IN = 4,\n    IO_STATUS_ANALOG_OUT = 8,\n    IO_STATUS_TOUCH_IN = 16,\n    IO_STATUS_EVENT_ON_EDGE = 32,\n    IO_STATUS_EVENT_PULSE_ON_EDGE = 64,\n    DEVICE_PIN_MAX_OUTPUT = 1023,\n    DEVICE_PIN_MAX_SERVO_RANGE = 180,\n    DEVICE_PIN_DEFAULT_SERVO_RANGE = 2000,\n    DEVICE_PIN_DEFAULT_SERVO_CENTER = 1500,\n    DEVICE_PIN_EVENT_NONE = 0,\n    DEVICE_PIN_EVENT_ON_EDGE = 1,\n    DEVICE_PIN_EVENT_ON_PULSE = 2,\n    DEVICE_PIN_EVENT_ON_TOUCH = 3,\n    DEVICE_PIN_EVT_RISE = 2,\n    DEVICE_PIN_EVT_FALL = 3,\n    DEVICE_PIN_EVT_PULSE_HI = 4,\n    DEVICE_PIN_EVT_PULSE_LO = 5,\n    PIN_CAPABILITY_DIGITAL = 1,\n    PIN_CAPABILITY_ANALOG = 2,\n    PIN_CAPABILITY_AD = 3,\n    PIN_CAPABILITY_ALL = 3,\n    None = 0,\n    Down = 1,\n    Up = 2,\n    // built/codal/libraries/codal-core/inc/driver-models/SPIFlash.h\n    SPIFLASH_PAGE_SIZE = 256,\n    SPIFLASH_SMALL_ROW_PAGES = 16,\n    SPIFLASH_BIG_ROW_PAGES = 256,\n    // built/codal/libraries/codal-core/inc/driver-models/Serial.h\n    CODAL_SERIAL_DEFAULT_BAUD_RATE = 115200,\n    CODAL_SERIAL_DEFAULT_BUFFER_SIZE = 20,\n    CODAL_SERIAL_EVT_DELIM_MATCH = 1,\n    CODAL_SERIAL_EVT_HEAD_MATCH = 2,\n    CODAL_SERIAL_EVT_RX_FULL = 3,\n    CODAL_SERIAL_RX_IN_USE = 1,\n    CODAL_SERIAL_TX_IN_USE = 2,\n    CODAL_SERIAL_RX_BUFF_INIT = 4,\n    CODAL_SERIAL_TX_BUFF_INIT = 8,\n    ASYNC = 0,\n    SYNC_SPINWAIT = 1,\n    SYNC_SLEEP = 2,\n    RxInterrupt = 0,\n    TxInterrupt = 1,\n    // built/codal/libraries/codal-core/inc/driver-models/Timer.h\n    CODAL_TIMER_DEFAULT_EVENT_LIST_SIZE = 10,\n    // built/codal/libraries/codal-core/inc/drivers/AnalogSensor.h\n    ANALOG_THRESHOLD_LOW = 1,\n    ANALOG_THRESHOLD_HIGH = 2,\n    ANALOG_SENSOR_UPDATE_NEEDED = 3,\n    ANALOG_SENSOR_INITIALISED = 1,\n    ANALOG_SENSOR_HIGH_THRESHOLD_PASSED = 2,\n    ANALOG_SENSOR_LOW_THRESHOLD_PASSED = 4,\n    ANALOG_SENSOR_LOW_THRESHOLD_ENABLED = 8,\n    ANALOG_SENSOR_HIGH_THRESHOLD_ENABLED = 16,\n    // built/codal/libraries/codal-core/inc/drivers/AnimatedDisplay.h\n    DISPLAY_EVT_ANIMATION_COMPLETE = 1,\n    DISPLAY_DEFAULT_AUTOCLEAR = 1,\n    DISPLAY_SPACING = 1,\n    DISPLAY_ANIMATE_DEFAULT_POS = -255,\n    DISPLAY_DEFAULT_SCROLL_SPEED = 120,\n    DISPLAY_DEFAULT_SCROLL_STRIDE = -1,\n    DISPLAY_DEFAULT_PRINT_SPEED = 400,\n    ANIMATION_MODE_NONE = 0,\n    ANIMATION_MODE_STOPPED = 1,\n    ANIMATION_MODE_SCROLL_TEXT = 2,\n    ANIMATION_MODE_PRINT_TEXT = 3,\n    ANIMATION_MODE_SCROLL_IMAGE = 4,\n    ANIMATION_MODE_ANIMATE_IMAGE = 5,\n    ANIMATION_MODE_ANIMATE_IMAGE_WITH_CLEAR = 6,\n    ANIMATION_MODE_PRINT_CHARACTER = 7,\n    // built/codal/libraries/codal-core/inc/drivers/FAT.h\n    FAT_RESERVED_SECTORS = 1,\n    FAT_ROOT_DIR_SECTORS = 4,\n    // built/codal/libraries/codal-core/inc/drivers/HID.h\n    HID_REQUEST_GET_REPORT = 1,\n    HID_REQUEST_GET_IDLE = 2,\n    HID_REQUEST_GET_PROTOCOL = 3,\n    HID_REQUEST_SET_REPORT = 9,\n    HID_REQUEST_SET_IDLE = 10,\n    HID_REQUEST_SET_PROTOCOL = 11,\n    // built/codal/libraries/codal-core/inc/drivers/HIDKeyboard.h\n    HID_KEYBOARD_NUM_REPORTS = 3,\n    HID_KEYBOARD_REPORT_GENERIC = 1,\n    HID_KEYBOARD_REPORT_CONSUMER = 2,\n    HID_KEYBOARD_KEYSTATE_SIZE_GENERIC = 8,\n    HID_KEYBOARD_KEYSTATE_SIZE_CONSUMER = 2,\n    HID_KEYBOARD_MODIFIER_OFFSET = 2,\n    HID_KEYBOARD_DELAY_DEFAULT = 10,\n    PressKey = 0,\n    ReleaseKey = 1,\n    // built/codal/libraries/codal-core/inc/drivers/KeyMap.h\n    KEYMAP_ALL_KEYS_UP_Val = 1,\n    KEYMAP_ALL_KEYS_UP_POS = 28,\n    KEYMAP_NORMAL_KEY_Val = 0,\n    KEYMAP_MODIFIER_KEY_Val = 1,\n    KEYMAP_MODIFIER_POS = 29,\n    KEYMAP_MEDIA_KEY_Val = 1,\n    KEYMAP_MEDIA_POS = 30,\n    KEYMAP_KEY_UP_Val = 0,\n    KEYMAP_KEY_DOWN_Val = 1,\n    KEYMAP_KEY_DOWN_POS = 31,\n    // built/codal/libraries/codal-core/inc/drivers/LEDMatrix.h\n    LED_MATRIX_GREYSCALE_BIT_DEPTH = 8,\n    LED_MATRIX_EVT_LIGHT_SENSE = 2,\n    LED_MATRIX_EVT_FRAME_TIMEOUT = 3,\n    LED_MATRIX_MINIMUM_BRIGHTNESS = 1,\n    LED_MATRIX_MAXIMUM_BRIGHTNESS = 255,\n    LED_MATRIX_DEFAULT_BRIGHTNESS = 255,\n    DISPLAY_MODE_BLACK_AND_WHITE = 0,\n    DISPLAY_MODE_GREYSCALE = 1,\n    DISPLAY_MODE_BLACK_AND_WHITE_LIGHT_SENSE = 2,\n    MATRIX_DISPLAY_ROTATION_0 = 0,\n    MATRIX_DISPLAY_ROTATION_90 = 1,\n    MATRIX_DISPLAY_ROTATION_180 = 2,\n    MATRIX_DISPLAY_ROTATION_270 = 3,\n    NO_CONN = 0,\n    // built/codal/libraries/codal-core/inc/drivers/MultiButton.h\n    MULTI_BUTTON_STATE_1 = 1,\n    MULTI_BUTTON_STATE_2 = 2,\n    MULTI_BUTTON_HOLD_TRIGGERED_1 = 4,\n    MULTI_BUTTON_HOLD_TRIGGERED_2 = 8,\n    MULTI_BUTTON_SUPRESSED_1 = 16,\n    MULTI_BUTTON_SUPRESSED_2 = 32,\n    MULTI_BUTTON_ATTACHED = 64,\n    // built/codal/libraries/codal-core/inc/drivers/TouchButton.h\n    TOUCH_BUTTON_CALIBRATION_PERIOD = 10,\n    TOUCH_BUTTON_CALIBRATION_LINEAR_OFFSET = 2,\n    TOUCH_BUTTON_CALIBRATION_PERCENTAGE_OFFSET = 5,\n    TOUCH_BUTTON_CALIBRATING = 16,\n    // built/codal/libraries/codal-core/inc/drivers/TouchSensor.h\n    TOUCH_SENSOR_MAX_BUTTONS = 10,\n    TOUCH_SENSOR_SAMPLE_PERIOD = 50,\n    TOUCH_SENSE_SAMPLE_MAX = 1000,\n    TOUCH_SENSOR_UPDATE_NEEDED = 1,\n    // built/codal/libraries/codal-core/inc/drivers/USB_HID_Keys.h\n    KEY_MOD_LCTRL = 1,\n    KEY_MOD_LSHIFT = 2,\n    KEY_MOD_LALT = 4,\n    KEY_MOD_LMETA = 8,\n    KEY_MOD_RCTRL = 16,\n    KEY_MOD_RSHIFT = 32,\n    KEY_MOD_RALT = 64,\n    KEY_MOD_RMETA = 128,\n    KEY_NONE = 0,\n    KEY_ERR_OVF = 1,\n    KEY_A = 4,\n    KEY_B = 5,\n    KEY_C = 6,\n    KEY_D = 7,\n    KEY_E = 8,\n    KEY_F = 9,\n    KEY_G = 10,\n    KEY_H = 11,\n    KEY_I = 12,\n    KEY_J = 13,\n    KEY_K = 14,\n    KEY_L = 15,\n    KEY_M = 16,\n    KEY_N = 17,\n    KEY_O = 18,\n    KEY_P = 19,\n    KEY_Q = 20,\n    KEY_R = 21,\n    KEY_S = 22,\n    KEY_T = 23,\n    KEY_U = 24,\n    KEY_V = 25,\n    KEY_W = 26,\n    KEY_X = 27,\n    KEY_Y = 28,\n    KEY_Z = 29,\n    KEY_1 = 30,\n    KEY_2 = 31,\n    KEY_3 = 32,\n    KEY_4 = 33,\n    KEY_5 = 34,\n    KEY_6 = 35,\n    KEY_7 = 36,\n    KEY_8 = 37,\n    KEY_9 = 38,\n    KEY_0 = 39,\n    KEY_ENTER = 40,\n    KEY_ESC = 41,\n    KEY_BACKSPACE = 42,\n    KEY_TAB = 43,\n    KEY_SPACE = 44,\n    KEY_MINUS = 45,\n    KEY_EQUAL = 46,\n    KEY_LEFTBRACE = 47,\n    KEY_RIGHTBRACE = 48,\n    KEY_BACKSLASH = 49,\n    KEY_HASHTILDE = 50,\n    KEY_SEMICOLON = 51,\n    KEY_APOSTROPHE = 52,\n    KEY_GRAVE = 53,\n    KEY_COMMA = 54,\n    KEY_DOT = 55,\n    KEY_SLASH = 56,\n    KEY_CAPSLOCK = 57,\n    KEY_F1 = 58,\n    KEY_F2 = 59,\n    KEY_F3 = 60,\n    KEY_F4 = 61,\n    KEY_F5 = 62,\n    KEY_F6 = 63,\n    KEY_F7 = 64,\n    KEY_F8 = 65,\n    KEY_F9 = 66,\n    KEY_F10 = 67,\n    KEY_F11 = 68,\n    KEY_F12 = 69,\n    KEY_SYSRQ = 70,\n    KEY_SCROLLLOCK = 71,\n    KEY_PAUSE = 72,\n    KEY_INSERT = 73,\n    KEY_HOME = 74,\n    KEY_PAGEUP = 75,\n    KEY_DELETE = 76,\n    KEY_END = 77,\n    KEY_PAGEDOWN = 78,\n    KEY_RIGHT = 79,\n    KEY_LEFT = 80,\n    KEY_DOWN = 81,\n    KEY_UP = 82,\n    KEY_NUMLOCK = 83,\n    KEY_KPSLASH = 84,\n    KEY_KPASTERISK = 85,\n    KEY_KPMINUS = 86,\n    KEY_KPPLUS = 87,\n    KEY_KPENTER = 88,\n    KEY_KP1 = 89,\n    KEY_KP2 = 90,\n    KEY_KP3 = 91,\n    KEY_KP4 = 92,\n    KEY_KP5 = 93,\n    KEY_KP6 = 94,\n    KEY_KP7 = 95,\n    KEY_KP8 = 96,\n    KEY_KP9 = 97,\n    KEY_KP0 = 98,\n    KEY_KPDOT = 99,\n    KEY_102ND = 100,\n    KEY_COMPOSE = 101,\n    KEY_POWER = 102,\n    KEY_KPEQUAL = 103,\n    KEY_F13 = 104,\n    KEY_F14 = 105,\n    KEY_F15 = 106,\n    KEY_F16 = 107,\n    KEY_F17 = 108,\n    KEY_F18 = 109,\n    KEY_F19 = 110,\n    KEY_F20 = 111,\n    KEY_F21 = 112,\n    KEY_F22 = 113,\n    KEY_F23 = 114,\n    KEY_F24 = 115,\n    KEY_OPEN = 116,\n    KEY_HELP = 117,\n    KEY_PROPS = 118,\n    KEY_FRONT = 119,\n    KEY_STOP = 120,\n    KEY_AGAIN = 121,\n    KEY_UNDO = 122,\n    KEY_CUT = 123,\n    KEY_COPY = 124,\n    KEY_PASTE = 125,\n    KEY_FIND = 126,\n    KEY_MUTE = 127,\n    KEY_VOLUMEUP = 128,\n    KEY_VOLUMEDOWN = 129,\n    KEY_KPCOMMA = 133,\n    KEY_RO = 135,\n    KEY_KATAKANAHIRAGANA = 136,\n    KEY_YEN = 137,\n    KEY_HENKAN = 138,\n    KEY_MUHENKAN = 139,\n    KEY_KPJPCOMMA = 140,\n    KEY_HANGEUL = 144,\n    KEY_HANJA = 145,\n    KEY_KATAKANA = 146,\n    KEY_HIRAGANA = 147,\n    KEY_ZENKAKUHANKAKU = 148,\n    KEY_KPLEFTPAREN = 182,\n    KEY_KPRIGHTPAREN = 183,\n    KEY_LEFTCTRL = 224,\n    KEY_LEFTSHIFT = 225,\n    KEY_LEFTALT = 226,\n    KEY_LEFTMETA = 227,\n    KEY_RIGHTCTRL = 228,\n    KEY_RIGHTSHIFT = 229,\n    KEY_RIGHTALT = 230,\n    KEY_RIGHTMETA = 231,\n    KEY_MEDIA_PLAYPAUSE = 232,\n    KEY_MEDIA_STOPCD = 233,\n    KEY_MEDIA_PREVIOUSSONG = 234,\n    KEY_MEDIA_NEXTSONG = 235,\n    KEY_MEDIA_EJECTCD = 236,\n    KEY_MEDIA_VOLUMEUP = 237,\n    KEY_MEDIA_VOLUMEDOWN = 238,\n    KEY_MEDIA_MUTE = 239,\n    KEY_MEDIA_WWW = 240,\n    KEY_MEDIA_BACK = 241,\n    KEY_MEDIA_FORWARD = 242,\n    KEY_MEDIA_STOP = 243,\n    KEY_MEDIA_FIND = 244,\n    KEY_MEDIA_SCROLLUP = 245,\n    KEY_MEDIA_SCROLLDOWN = 246,\n    KEY_MEDIA_EDIT = 247,\n    KEY_MEDIA_SLEEP = 248,\n    KEY_MEDIA_COFFEE = 249,\n    KEY_MEDIA_REFRESH = 250,\n    KEY_MEDIA_CALC = 251,\n    // built/codal/libraries/codal-core/inc/drivers/uf2format.h\n    UF2FORMAT_H = 1,\n    APP_START_ADDRESS = 8192,\n    UF2_FLAG_NOFLASH = 1,\n    // built/codal/libraries/codal-core/inc/streams/DataStream.h\n    DATASTREAM_MAXIMUM_BUFFERS = 1,\n    // built/codal/libraries/codal-core/inc/streams/LevelDetector.h\n    LEVEL_THRESHOLD_LOW = 1,\n    LEVEL_THRESHOLD_HIGH = 2,\n    LEVEL_DETECTOR_INITIALISED = 1,\n    LEVEL_DETECTOR_HIGH_THRESHOLD_PASSED = 2,\n    LEVEL_DETECTOR_LOW_THRESHOLD_PASSED = 4,\n    LEVEL_DETECTOR_DEFAULT_WINDOW_SIZE = 128,\n    // built/codal/libraries/codal-core/inc/streams/Synthesizer.h\n    SYNTHESIZER_SAMPLE_RATE = 44100,\n    TONE_WIDTH = 1024,\n    // built/codal/libraries/codal-core/inc/types/BitmapFont.h\n    BITMAP_FONT_WIDTH = 5,\n    BITMAP_FONT_HEIGHT = 5,\n    BITMAP_FONT_ASCII_START = 32,\n    BITMAP_FONT_ASCII_END = 126,\n    // built/codal/libraries/codal-core/inc/types/CoordinateSystem.h\n    COORDINATE_SPACE_ROTATED_0 = 0,\n    COORDINATE_SPACE_ROTATED_90 = 1,\n    COORDINATE_SPACE_ROTATED_180 = 2,\n    COORDINATE_SPACE_ROTATED_270 = 3,\n    RAW = 0,\n    SIMPLE_CARTESIAN = 1,\n    NORTH_EAST_DOWN = 2,\n    NORTH_EAST_UP = 3,\n    // built/codal/libraries/codal-core/inc/types/Event.h\n    DEVICE_ID_ANY = 0,\n    DEVICE_EVT_ANY = 0,\n    CREATE_ONLY = 0,\n    CREATE_AND_FIRE = 1,\n    DEVICE_EVENT_DEFAULT_LAUNCH_MODE = 1,\n    // built/codal/libraries/codal-core/inc/types/RefCounted.h\n    REF_TAG_STRING = 1,\n    REF_TAG_BUFFER = 2,\n    REF_TAG_IMAGE = 3,\n    REF_TAG_USER = 32,\n    // built/codal/pxtapp/accelerometer/axis.h\n    ACC_ROTATION = 0,\n    // built/codal/pxtapp/hf2dbg.h\n    HF2DBG_H = 1,\n    // built/codal/pxtapp/pins.h\n    CFG_PIN_ACCELEROMETER_INT = 1,\n    CFG_PIN_ACCELEROMETER_SCL = 2,\n    CFG_PIN_ACCELEROMETER_SDA = 3,\n    CFG_PIN_BTN_A = 4,\n    CFG_PIN_BTN_B = 5,\n    CFG_PIN_BTN_SLIDE = 6,\n    CFG_PIN_DOTSTAR_CLOCK = 7,\n    CFG_PIN_DOTSTAR_DATA = 8,\n    CFG_PIN_FLASH_CS = 9,\n    CFG_PIN_FLASH_MISO = 10,\n    CFG_PIN_FLASH_MOSI = 11,\n    CFG_PIN_FLASH_SCK = 12,\n    CFG_PIN_LED = 13,\n    CFG_PIN_LIGHT = 14,\n    CFG_PIN_MICROPHONE = 15,\n    CFG_PIN_MIC_CLOCK = 16,\n    CFG_PIN_MIC_DATA = 17,\n    CFG_PIN_MISO = 18,\n    CFG_PIN_MOSI = 19,\n    CFG_PIN_NEOPIXEL = 20,\n    CFG_PIN_RX = 21,\n    CFG_PIN_RXLED = 22,\n    CFG_PIN_SCK = 23,\n    CFG_PIN_SCL = 24,\n    CFG_PIN_SDA = 25,\n    CFG_PIN_SPEAKER_AMP = 26,\n    CFG_PIN_TEMPERATURE = 27,\n    CFG_PIN_TX = 28,\n    CFG_PIN_TXLED = 29,\n    CFG_PIN_IR_OUT = 30,\n    CFG_PIN_IR_IN = 31,\n    CFG_PIN_DISPLAY_SCK = 32,\n    CFG_PIN_DISPLAY_MISO = 33,\n    CFG_PIN_DISPLAY_MOSI = 34,\n    CFG_PIN_DISPLAY_CS = 35,\n    CFG_PIN_DISPLAY_DC = 36,\n    CFG_DISPLAY_WIDTH = 37,\n    CFG_DISPLAY_HEIGHT = 38,\n    CFG_DISPLAY_CFG0 = 39,\n    CFG_DISPLAY_CFG1 = 40,\n    CFG_DISPLAY_CFG2 = 41,\n    CFG_DISPLAY_CFG3 = 42,\n    CFG_PIN_DISPLAY_RST = 43,\n    CFG_PIN_DISPLAY_BL = 44,\n\n    CFG_PIN_AN = 60,\n    CFG_PIN_RST = 61,\n    CFG_PIN_CS = 62,\n    CFG_PIN_PWM = 63,\n    CFG_PIN_INT = 64,\n\n    CFG_PIN_A0 = 100,\n    CFG_PIN_A1 = 101,\n    CFG_PIN_A2 = 102,\n    CFG_PIN_A3 = 103,\n    CFG_PIN_A4 = 104,\n    CFG_PIN_A5 = 105,\n    CFG_PIN_A6 = 106,\n    CFG_PIN_A7 = 107,\n    CFG_PIN_A8 = 108,\n    CFG_PIN_A9 = 109,\n    CFG_PIN_A10 = 110,\n    CFG_PIN_A11 = 111,\n    CFG_PIN_A12 = 112,\n    CFG_PIN_A13 = 113,\n    CFG_PIN_A14 = 114,\n    CFG_PIN_A15 = 115,\n    CFG_PIN_D0 = 150,\n    CFG_PIN_D1 = 151,\n    CFG_PIN_D2 = 152,\n    CFG_PIN_D3 = 153,\n    CFG_PIN_D4 = 154,\n    CFG_PIN_D5 = 155,\n    CFG_PIN_D6 = 156,\n    CFG_PIN_D7 = 157,\n    CFG_PIN_D8 = 158,\n    CFG_PIN_D9 = 159,\n    CFG_PIN_D10 = 160,\n    CFG_PIN_D11 = 161,\n    CFG_PIN_D12 = 162,\n    CFG_PIN_D13 = 163,\n    CFG_PIN_D14 = 164,\n    CFG_PIN_D15 = 165,\n    CFG_NUM_NEOPIXELS = 200,\n    CFG_NUM_DOTSTARS = 201,\n    CFG_DEFAULT_BUTTON_MODE = 202,\n    CFG_SWD_ENABLED = 203,\n    CFG_FLASH_BYTES = 204,\n    BUTTON_ACTIVE_HIGH_PULL_DOWN = 17,\n    BUTTON_ACTIVE_HIGH_PULL_UP = 33,\n    BUTTON_ACTIVE_HIGH_PULL_NONE = 49,\n    BUTTON_ACTIVE_LOW_PULL_DOWN = 16,\n    BUTTON_ACTIVE_LOW_PULL_UP = 32,\n    BUTTON_ACTIVE_LOW_PULL_NONE = 48,\n    // built/codal/pxtapp/platform.h\n    PAGE_SIZE = 256,\n    DEV_NUM_PINS = 48,\n    IMAGE_BITS = 1,\n    LCD_WIDTH = 128,\n    LCD_HEIGHT = 64,\n    TEMPERATURE_NOMINAL_VALUE = 25,\n    TEMPERATURE_NOMINAL_READING = 10000,\n    TEMPERATURE_BETA = 3380,\n    TEMPERATURE_SERIES_RESISTOR = 10000,\n    LIGHTSENSOR_SENSITIVITY = 868,\n    LIGHTSENSOR_LOW_THRESHOLD = 128,\n    LIGHTSENSOR_HIGH_THRESHOLD = 896,\n    PA_0 = 0,\n    PA_1 = 1,\n    PA_2 = 2,\n    PA_3 = 3,\n    PA_4 = 4,\n    PA_5 = 5,\n    PA_6 = 6,\n    PA_7 = 7,\n    PA_8 = 8,\n    PA_9 = 9,\n    PA_10 = 10,\n    PA_11 = 11,\n    PA_12 = 12,\n    PA_13 = 13,\n    PA_14 = 14,\n    PA_15 = 15,\n    PB_0 = 16,\n    PB_1 = 17,\n    PB_2 = 18,\n    PB_3 = 19,\n    PB_4 = 20,\n    PB_5 = 21,\n    PB_6 = 22,\n    PB_7 = 23,\n    PB_8 = 24,\n    PB_9 = 25,\n    PB_10 = 26,\n    PB_12 = 28,\n    PB_13 = 29,\n    PB_14 = 30,\n    PB_15 = 31,\n    PC_0 = 32,\n    PC_1 = 33,\n    PC_2 = 34,\n    PC_3 = 35,\n    PC_4 = 36,\n    PC_5 = 37,\n    PC_6 = 38,\n    PC_7 = 39,\n    PC_8 = 40,\n    PC_9 = 41,\n    PC_10 = 42,\n    PC_11 = 43,\n    PC_12 = 44,\n    PC_13 = 45,\n    PC_14 = 46,\n    PC_15 = 47,\n    PD_2 = 50,\n    PH_0 = 112,\n    PH_1 = 113,\n    // built/codal/pxtapp/pxt.h\n    DEVICE_ID_BUTTON_SLIDE = 3000,\n    DEVICE_ID_MICROPHONE = 3001,\n    DEVICE_ID_FIRST_BUTTON = 4000,\n    DEVICE_ID_FIRST_TOUCHBUTTON = 4100,\n    // built/codal/pxtapp/pxtbase.h\n    MEMDBG_ENABLED = 0,\n    PXT_VTABLE_SHIFT = 2,\n    Int8LE = 1,\n    UInt8LE = 2,\n    Int16LE = 3,\n    UInt16LE = 4,\n    Int32LE = 5,\n    Int8BE = 6,\n    UInt8BE = 7,\n    Int16BE = 8,\n    UInt16BE = 9,\n    Int32BE = 10,\n    UInt32LE = 11,\n    UInt32BE = 12,\n    Float32LE = 13,\n    Float64LE = 14,\n    Float32BE = 15,\n    Float64BE = 16,\n    Undefined = 0,\n    Boolean = 1,\n    Number = 2,\n    String = 3,\n    Object = 4,\n    Function = 5,\n    // built/codal/pxtapp/pxtconfig.h\n    PXT_VM = 0,\n    // built/codal/pxtapp/uf2hid.h\n    UF2_HID_H = 1,\n}\n",
+      "main.ts": "\n",
+      "README.md": ""
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+    "packages": {
+        "approvedOrgs": [
+            "Microsoft",
+            "ghi-electronics"
+        ],
+        "approvedRepos": [
+        ]
+    },
+  "languages": [
+    "en",
+    "ar",
+    "cs",
+    "da",
+    "de",
+    "el",
+    "es-ES",
+    "fi",
+    "fr",
+    "hu",
+    "it",
+    "ja",
+    "ko",
+    "nl",
+    "no",
+    "pt-BR",
+    "pt-PT",
+    "ru",
+    "si-LK",
+    "sk",
+    "sv-SE",
+    "tr",
+    "uk",
+    "zh-CN",
+    "zh-TW"
+  ],
+  "galleries": {
+
+    "Output Components": "components-outputs",
+    "Input Components": "components-inputs",
+    "Coding": "coding",
+    "Projects": "projects"
+
+  }
+}
